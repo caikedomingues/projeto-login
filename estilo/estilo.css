@@ -30,11 +30,40 @@ main{
 
 form > div.campo{
 	background-color: var(--lilás);
+	border: 2px solid var(--lilás);
 	width: 100%;
 	display: block;
 	height: 40px;
 	border-radius: 5px;
 	margin: 5px 0px;
+}
+
+i{
+	color: white;
+	font-size: 2em;
+	padding: 5px;
+	width: 40px;
+	height: 100%;
+	border: 0px;
+}
+
+
+input{
+	background-color: #94cfcd;
+	font-size: 1em;
+	height: 100%;
+	width: calc(100% - 44px);
+	border-radius: 8px;
+	padding: 4px;
+	transform: translateY(-12px);/*Devemos sempre colocar
+	os transforms na ultima linha do seletor, isso resolve
+	problemas de compatibilidade*/
+
+}
+
+input:focus-within{
+	background-color: white;
+
 }
 
 div.campo > label{
@@ -45,7 +74,6 @@ div.campo > label{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 	background-color: white;
 	width: 250px;
 	height: 515px;
@@ -55,6 +83,7 @@ div.campo > label{
 	display: block;
 	transition: width 1s, height 1s;
 	transition-timing-function: ease;
+	transform: translate(-50%, -50%);
 
 }
 
